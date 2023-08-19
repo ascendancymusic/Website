@@ -5,157 +5,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: Gotham XLight, sans-serif;
-  
-@font-face {
-    font-family: gotham;
-    font-style: normal;
-    font-weight: 400;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamBook.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: italic;
-    font-weight: 400;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamBookItalic.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: normal;
-    font-weight: 300;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamLight.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: italic;
-    font-weight: 300;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamLightItalic.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: normal;
-    font-weight: 500;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamMedium.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: normal;
-    font-weight: 500;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamMedium_1.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: italic;
-    font-weight: 500;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamMediumItalic.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: normal;
-    font-weight: 700;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamBold.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: normal;
-    font-weight: 700;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamBold.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham;
-    font-style: italic;
-    font-weight: 700;
-    src: local('Gotham'),url(https://fonts.cdnfonts.com/s/62851/GothamBoldItalic.woff) format('woff')
-}
-
-@font-face {
-    font-family: jost;
-    font-style: normal;
-    font-weight: 400;
-    src: local('Jost'),url(https://fonts.cdnfonts.com/s/62851/JostVariableFont_wght.woff) format('woff')
-}
-
-@font-face {
-    font-family: jost;
-    font-style: italic;
-    font-weight: 400;
-    src: local('Jost'),url(https://fonts.cdnfonts.com/s/62851/JostItalicVariableFont_wght.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham black;
-    font-style: normal;
-    font-weight: 500;
-    src: local('Gotham Black'),url(https://fonts.cdnfonts.com/s/62851/GothamBlack.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham light;
-    font-style: normal;
-    font-weight: 500;
-    src: local('Gotham Light'),url(https://fonts.cdnfonts.com/s/62851/GothamLight.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham thin;
-    font-style: normal;
-    font-weight: 500;
-    src: local('Gotham Thin'),url(https://fonts.cdnfonts.com/s/62851/GothamThin.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham xlight;
-    font-style: normal;
-    font-weight: 500;
-    src: local('Gotham XLight'),url(https://fonts.cdnfonts.com/s/62851/GothamXLight.woff) format('woff')
-}
-
-@font-face {
-    font-family: carnero;
-    font-style: normal;
-    font-weight: 700;
-    src: local('Carnero'),url(https://fonts.cdnfonts.com/s/62851/CarneroBold.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham book;
-    font-style: italic;
-    font-weight: 500;
-    src: local('Gotham Book'),url(https://fonts.cdnfonts.com/s/62851/GothamBookItalic.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham thin;
-    font-style: italic;
-    font-weight: 500;
-    src: local('Gotham Thin'),url(https://fonts.cdnfonts.com/s/62851/GothamThinItalic.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham ultra;
-    font-style: italic;
-    font-weight: 500;
-    src: local('Gotham Ultra'),url(https://fonts.cdnfonts.com/s/62851/GothamUltraItalic.woff) format('woff')
-}
-
-@font-face {
-    font-family: gotham xlight;
-    font-style: italic;
-    font-weight: 500;
-    src: local('Gotham XLight'),url(https://fonts.cdnfonts.com/s/62851/GothamXLightItalic.woff) format('woff')
+  font-family: Gotham XLight, sans-serif !important;
 }
 
 .label {
-  font-family: "Gotham", sans-serif;
+  font-family: "Gotham", sans-serif !important;
   font-size: 16px;
 }
 
@@ -163,7 +17,7 @@ body {
 .label-line1 { 
   font-weight: 600; /* Gotham Black */
   font-size: 18px;
-  font-family: "Gotham", sans-serif; /* Make the "Welcome!" text bold */
+  font-family: "Gotham", sans-serif !important; /* Make the "Welcome!" text bold */
   letter-spacing: 7px; /* Adjust the value to change letter spacing */
 }
 /* Small font 1 (Chipper) */
@@ -176,7 +30,7 @@ body {
 .label-line3 { 
   font-weight: 600; /* Gotham Black */
   font-size: 18px;
-  font-family: "Gotham", sans-serif; /* Make the "Welcome!" text bold */
+  font-family: "Gotham", sans-serif !important; /* Make the "Welcome!" text bold */
   letter-spacing: 9.5px; /* Adjust the value to change letter spacing */
 }
 /* Small font 2 (Bliss, Deceiver and Broken Love) */
@@ -189,14 +43,14 @@ body {
 .label-line5 { 
   font-weight: 600; /* Gotham Black */
   font-size: 18px;
-  font-family: "Gotham", sans-serif; /* Make the "Welcome!" text bold */
+  font-family: "Gotham", sans-serif !important; /* Make the "Welcome!" text bold */
   letter-spacing: 6px; /* Adjust the value to change letter spacing */
 }
 /* Big font 2 (Broken Love) */
 .label-line6 { 
   font-weight: 600; /* Gotham Black */
   font-size: 18px;
-  font-family: "Gotham", sans-serif; /* Make the "Welcome!" text bold */
+  font-family: "Gotham", sans-serif !important; /* Make the "Welcome!" text bold */
   letter-spacing: 4px; /* Adjust the value to change letter spacing */
 }
 
@@ -232,7 +86,7 @@ body {
   position: relative; /* Add relative positioning */
   font-size: 18px; /* Adjust font size as needed */
   text-shadow: 2px 2px 4px rgba(0, 128, 0, 5); /* Add text shadow */
-  font-family: "Gotham Black", sans-serif; /* Make the "Welcome!" text bold */
+  font-family: "Gotham Black", sans-serif !important; /* Make the "Welcome!" text bold */
   letter-spacing: 8px; /* Adjust the value to change letter spacing */
   transition: color 0.8s ease; /* Longer transition for color change */
 }
@@ -314,18 +168,18 @@ body {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 128, 0, 5); /* Add text shadow */
   letter-spacing: 14px; /* Adjust the value to change letter spacing */
-  font-family: "Gotham XLight", sans-serif; /* Change the font for the content section */
+  font-family: "Gotham XLight", sans-serif !important; /* Change the font for the content section */
   margin-left: 22px; /* Adjust the left margin to re-center the content */
 }
 
 .content h2 {
-  font-family: "Gotham", sans-serif; /* Make the "Welcome!" text bold */
+  font-family: "Gotham", sans-serif !important; /* Make the "Welcome!" text bold */
   letter-spacing: 8px; /* Adjust the value to change letter spacing */
 }
 
 .content h3 {
   margin-top: 90px;
-  font-family: "Gotham", sans-serif;
+  font-family: "Gotham", sans-serif !important;
   letter-spacing: 8px;
   display: inline-block;
   padding: 10px 20px;
@@ -486,7 +340,7 @@ body {
   font-size: 12px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 128, 0, 0.5);
-  font-family: "Gotham XLight", sans-serif;
+  font-family: "Gotham XLight", sans-serif !important;
   z-index: 1;
   letter-spacing: 8px;
 }
@@ -542,7 +396,7 @@ body {
 	transition: 0.5s;
 	font-size: 18px; /* Adjust font size as needed */
     text-shadow: 2px 2px 4px rgba(0, 128, 0, 5); /* Add text shadow */
-    font-family: "Gotham Black", sans-serif;
+    font-family: "Gotham Black", sans-serif !important;
     letter-spacing: 8px; /* Adjust the value to change letter spacing */
 	border:2px solid rgba(0, 0, 0, 0.80);
 	backdrop-filter: blur(7px);
