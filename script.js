@@ -35,6 +35,10 @@ const loadImage = new Promise((resolve, reject) => {
 });
 
 let wheelAngle = 0; // Initialize angle variable
+let isDragging = false;
+let initialAngle = 0;
+let initialDragVector = { x: 0, y: 0 };
+let soundElement = new Audio("sound.wav");
 
 // Store the previous label
 let previousLabel = "";
@@ -62,11 +66,6 @@ loadImage.then(image => {
         stiffness: 0.1
     });
     World.add(world, constraint);
-
-    let isDragging = false;
-    let initialAngle = 0;
-    let initialDragVector = { x: 0, y: 0 };
-	let soundElement = new Audio("sound.wav");
 
     // Capture mouse drags on the wheel's hitbox
     const wheelCanvas = render.canvas;
@@ -129,6 +128,73 @@ loadImage.then(image => {
     wheelCanvas.addEventListener('mousedown', startDragging);
     document.addEventListener('mousemove', onDocumentMouseMove);
     document.addEventListener('mouseup', stopDragging);
+
+    // Capture touch events on the wheel's hitbox
+    const startDraggingTouch = (event) => {
+        event.preventDefault(); // Prevent default touch event behavior
+        const touch = event.touches[0];
+        const canvasX = touch.clientX - wheelCanvas.getBoundingClientRect().left;
+        const canvasY = touch.clientY - wheelCanvas.getBoundingClientRect().top;
+
+        const distance = Math.sqrt(
+            (canvasX - wheelPosition.x) ** 2 +
+            (canvasY - wheelPosition.y) ** 2
+        );
+
+        if (distance <= wheelSize / 2) {
+            isDragging = true;
+            initialDragVector = Matter.Vector.sub(
+                { x: canvasX, y: canvasY },
+                { x: wheel.position.x, y: wheel.position.y }
+            );
+            initialAngle = Math.atan2(initialDragVector.y, initialDragVector.x) - wheel.angle;
+        }
+    };
+
+    const onDocumentTouchMove = (event) => {
+        if (isDragging) {
+            event.preventDefault(); // Prevent scrolling while dragging
+            const touch = event.touches[0];
+            const canvasX = touch.clientX - wheelCanvas.getBoundingClientRect().left;
+            const canvasY = touch.clientY - wheelCanvas.getBoundingClientRect().top;
+
+            const dragVector = Matter.Vector.sub(
+                { x: canvasX, y: canvasY },
+                { x: wheel.position.x, y: wheel.position.y }
+            );
+            const newAngle = Math.atan2(dragVector.y, dragVector.x) - initialAngle;
+
+            Matter.Body.setAngle(wheel, newAngle);
+
+            // Update the angle display text and path
+            const degrees = ((wheelAngle * (180 / Math.PI) + 360) % 360).toFixed(0);
+            const { label, path } = getAngleInfo(degrees);
+
+            // Check if the label has changed before playing the sound
+            if (label !== previousLabel) {
+                soundElement.pause(); // Pause the previous sound
+                soundElement.currentTime = 0; // Reset the time
+                soundElement = new Audio("sound.wav"); // Create a new sound element
+                soundElement.play(); // Play the new sound
+                previousLabel = label;
+            }
+
+            angleDisplay.innerHTML = `<a href="${path}" style="text-decoration: none; color: white; filter: drop-shadow(2px 2px 10px rgba(0, 128, 0, 0.5)); transition: color 0.3s ease, filter 0.3s ease;" onmouseover="this.style.color='#00d965'; this.style.filter='drop-shadow(2px 2px 10px rgba(0, 128, 0, 1))';" onmouseout="this.style.color='white'; this.style.filter='drop-shadow(2px 2px 10px rgba(0, 128, 0, 0.5))';">${label}</a>`;
+            wheelAngle = newAngle;
+        }
+    };
+
+    const stopDraggingTouch = () => {
+        isDragging = false;
+    };
+
+    // Attach the touch events only to the wheel's hitbox area
+    wheelCanvas.addEventListener('touchstart', startDraggingTouch);
+    document.addEventListener('touchmove', onDocumentTouchMove);
+    document.addEventListener('touchend', stopDraggingTouch);
+
+    // Run the engine
+    Engine.run(engine);
 });
 
 // Create a function to map angle ranges to text labels and paths
@@ -186,6 +252,3 @@ songSelector.addEventListener("click", () => {
         }, 0);
     }
 });
-
-// Run the engine
-Engine.run(engine);
