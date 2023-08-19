@@ -7,19 +7,7 @@ body {
   background-attachment: fixed;
   font-family: Gotham XLight, sans-serif;
   
-}
-@font-face {
-	font-family: "Gotham"
-	src: url("fonts/GothamMedium.otf");
-}
-@font-face {
-	font-family: "Gotham Black"
-	src: url("fonts/Gotham-Black.otf");
-}
-@font-face {
-	font-family: "Gotham XLight"
-	src: url("fonts/Gotham-XLight.otf");
-}
+@import url('https://fonts.cdnfonts.com/css/gotham-6');
 
 .label {
   font-family: "Gotham", sans-serif;
