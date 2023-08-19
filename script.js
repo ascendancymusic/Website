@@ -35,10 +35,6 @@ const loadImage = new Promise((resolve, reject) => {
 });
 
 let wheelAngle = 0; // Initialize angle variable
-let isDragging = false;
-let initialAngle = 0;
-let initialDragVector = { x: 0, y: 0 };
-let soundElement = new Audio("sound.wav");
 
 // Store the previous label
 let previousLabel = "";
@@ -66,6 +62,11 @@ loadImage.then(image => {
         stiffness: 0.1
     });
     World.add(world, constraint);
+
+    let isDragging = false;
+    let initialAngle = 0;
+    let initialDragVector = { x: 0, y: 0 };
+    let soundElement = new Audio("sound.wav");
 
     // Capture mouse drags on the wheel's hitbox
     const wheelCanvas = render.canvas;
@@ -131,10 +132,8 @@ loadImage.then(image => {
 
     // Capture touch events on the wheel's hitbox
     const startDraggingTouch = (event) => {
-        event.preventDefault(); // Prevent default touch event behavior
-        const touch = event.touches[0];
-        const canvasX = touch.clientX - wheelCanvas.getBoundingClientRect().left;
-        const canvasY = touch.clientY - wheelCanvas.getBoundingClientRect().top;
+        const canvasX = event.touches[0].clientX - wheelCanvas.getBoundingClientRect().left;
+        const canvasY = event.touches[0].clientY - wheelCanvas.getBoundingClientRect().top;
 
         const distance = Math.sqrt(
             (canvasX - wheelPosition.x) ** 2 +
@@ -153,10 +152,8 @@ loadImage.then(image => {
 
     const onDocumentTouchMove = (event) => {
         if (isDragging) {
-            event.preventDefault(); // Prevent scrolling while dragging
-            const touch = event.touches[0];
-            const canvasX = touch.clientX - wheelCanvas.getBoundingClientRect().left;
-            const canvasY = touch.clientY - wheelCanvas.getBoundingClientRect().top;
+            const canvasX = event.touches[0].clientX - wheelCanvas.getBoundingClientRect().left;
+            const canvasY = event.touches[0].clientY - wheelCanvas.getBoundingClientRect().top;
 
             const dragVector = Matter.Vector.sub(
                 { x: canvasX, y: canvasY },
@@ -192,9 +189,6 @@ loadImage.then(image => {
     wheelCanvas.addEventListener('touchstart', startDraggingTouch);
     document.addEventListener('touchmove', onDocumentTouchMove);
     document.addEventListener('touchend', stopDraggingTouch);
-
-    // Run the engine
-    Engine.run(engine);
 });
 
 // Create a function to map angle ranges to text labels and paths
@@ -252,3 +246,6 @@ songSelector.addEventListener("click", () => {
         }, 0);
     }
 });
+
+// Run the engine
+Engine.run(engine);
