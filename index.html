@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AscenDancy</title>
-    <base href="/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AscenDancy</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"> <!-- Link to your custom stylesheet -->
 </head>
-<body>
-    <header>
-        <h1>AscenDancy</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome! Work in progress lmaoo</p>
-    </section>
-
-    <section id="music">
-        <h2>Music</h2>
-        <div class="artwork">
-        <a href="https://bit.ly/achipper">
-            <img src="https://cdn.amuse.io/4a3992e0-652e-4f63-a120-d8f23bf16a7f.400x400.jpg" width="300" height="300" alt="Artwork 1">
-        </a>
-        <a href="https://share.amuse.io/track/ascendancy-bliss">
-            <img src="https://cdn.amuse.io/d20b0c4b-7b55-425f-a5e6-c5988bfa5171.400x400.jpg" width="300" height="300" alt="Artwork 2">
-        </a>
-        <a href="https://share.amuse.io/track/ascendancy-deceiver">
-            <img src="https://cdn.amuse.io/99e7ea5a-9242-42cc-bb17-c9570bd1c839.400x400.jpg" width="300" height="300" alt="Artwork 3">
-        </a>
-        <a href="https://share.amuse.io/track/ascendancy-broken-love">
-            <img src="https://cdn.amuse.io/883fe204-66db-4451-9dad-ba041298abca.400x400.jpg" width="300" height="300" alt="Artwork 4">
-        </a>
-        </div>
-        <!-- Add more artwork items as needed -->
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you're interested in my work, feel free to reach out:</p>
-        <p>Email: <a href="mailto:contact@ascendancymusic.com">contact@ascendancymusic.com</a></p>
-        <p>YouTube: <a href="https://youtube.com/ascendancy">AscenDancy</a></p>
-	<p>Spotify: <a href="https://open.spotify.com/artist/7LNgM6pGsy9KGrdLy0CzdU">AscenDancy</a></p>
-	<p>SoundCloud: <a href="https://soundcloud.com/dancyascen">AscenDancy</a></p>
-	<p>Instagram: <a href="https://instagram.com/dancyascen">@dancyascen</a></p>
-	<p>Twitter: <a href="https://twitter.com/dancyascen">@dancyascen</a></p>
-    </section>
-
-    <footer>
+<body class="fade-in">
+  <video autoplay loop muted playsinline class="background-video">
+    <source src="Video.mp4" type="video/mp4"> <!-- Replace with your video file name and path -->
+  </video>
+  <audio id="sound" preload="auto">
+    <source src="sound.wav" type="audio/wav">
+  </audio>
+  <div class="top-bar">
+	<button class="hamburger">
+	  <div class="bar"><div>
+	</button>
+  <nav class="mobile-nav">
+	<a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+	<a href="https://payhip.com/AscenDancy">STORE</a>
+    <a href="upcoming.html">UPCOMING</a>
+  </nav>
+    <div class="top-left-menu">
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    <div class="top-center-logo">
+      <h1><a href="https://ascendancymusic.com"><img src="AscenDancyText.png" alt="Logo"></a></h1>
+    </div>
+    <div class="top-right-menu fade-in">
+      <a href="https://payhip.com/AscenDancy">STORE</a>
+      <a href="upcoming.html">UPCOMING</a>
+    </div>
+  </div>
+  <div class="content">
+    <h2 data-value="WELCOME!">WELCOME!</h2>
+    <p data-value="ENJOY YOUR VISIT!">ENJOY YOUR VISIT!</p>
+	<h3 id="song-selector" data-value="CLICK TO OPEN SONG MENU">CLICK TO OPEN SONG MENU</h3>
+  </div>
+  <div id="wheel-container"></div>
+  <p id="angle-display" class="fade-in">1. SPIN THE VINYL TO SELECT<br />2. CLICK THE SONG TO PLAY IT</p>
+  <script src="matter.js"></script>
+  <script src="script.js"></script>
+  <script src="burger.js"></script>
+  <script src="load.js"></script>
+  <script src="#opensong.js"></script>
+  <footer class="footer">
         <p>&copy; 2023 AscenDancy. All rights reserved.</p>
+		<div class="social-icons">
+			<a href="https://youtube.com/ascendancy"><img src="https://img.icons8.com/?size=512&id=37325&format=png" alt="YouTube"></a>
+			<a href="https://open.spotify.com/artist/7LNgM6pGsy9KGrdLy0CzdU"><img src="https://img.icons8.com/?size=512&id=6707&format=png" alt="Spotify"></a>
+			<a href="https://soundcloud.com/dancyascen"><img src="https://img.icons8.com/?size=512&id=12464&format=png" alt="SoundCloud"></a>
+			<a href="https://instagram.com/dancyascen"><img src="https://img.icons8.com/?size=512&id=32292&format=png" alt="Instagram"></a>
+			<a href="https://twitter.com/dancyascen"><img src="https://img.icons8.com/?size=512&id=437&format=png" alt="Twitter"></a>
+		</div>
     </footer>
 </body>
 </html>
