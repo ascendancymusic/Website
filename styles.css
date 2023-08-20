@@ -392,12 +392,12 @@ body {
 	z-index: 10;
 	background-color: rgba(0, 0, 0, 0.7);
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 2.5);
-	padding-top: 120px;
+	padding-top: 100px;
 	transition: 0.5s;
-	font-size: 18px; /* Adjust font size as needed */
+	font-size: 12px; /* Adjust font size as needed */
     text-shadow: 2px 2px 4px rgba(0, 128, 0, 5); /* Add text shadow */
     font-family: "Gotham Black", sans-serif !important;
-    letter-spacing: 8px; /* Adjust the value to change letter spacing */
+    letter-spacing: 7px; /* Adjust the value to change letter spacing */
 	border:2px solid rgba(0, 0, 0, 0.80);
 	backdrop-filter: blur(7px);
 	display: none;
@@ -440,7 +440,7 @@ body {
 
 
 /* Responsive adjustments */
-@media (max-width: 1081px) {
+@media (max-width: 1281px) {
   .top-left-menu,
   .top-right-menu {
     display: none; /* Hide desktop navigation links */
@@ -448,6 +448,7 @@ body {
   .top-center-logo {
     margin: 0 auto; /* Center the logo horizontally */
     transform: translateX(-28px); /* Adjust the translation amount as needed */
+	transform: scale(0.75);
   }
   
   .social-icons {
@@ -456,8 +457,8 @@ body {
   }
 
   .social-icons a {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 6px; /* Add margin between icons */
   }
   
@@ -467,6 +468,28 @@ body {
   
   .mobile-nav {
     display: block;
+  }
+  
+  .footer {
+	font-size: 12px;
+  }
+  
+  .content h2 {
+  font-size: 14px;
+  letter-spacing: 7px; /* Adjust the value to change letter spacing */
+  }
+  
+  .content h3 {
+  margin-top: 20px;
+  letter-spacing: 7px;
+  font-size: 14px;
+  padding: 10px 20px;
+  }
+  
+  .content {
+  margin-top: 150px;
+  letter-spacing: 14px; /* Adjust the value to change letter spacing */
+  font-size: 12px;
   }
   
   #wheel-container {
