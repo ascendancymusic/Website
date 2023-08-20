@@ -281,7 +281,7 @@ body {
 }
 .about-page .content {
   text-align: left; /* Align text to the left */
-  margin-left: calc(50% - 515px);
+  margin-left: calc(30%);
   position: relative; /* Position relative for the pseudo-element */
 }
 .about-page .section-bar {
