@@ -500,5 +500,13 @@ body {
 	top: 39%;
     left: 51.5%;
   }
+	
+  .about-page .content {
+    margin-left: calc(50% - 215px);
+  }
+  .about-paragraph {
+    letter-spacing: 4px;
+    font-size: 14px;
+}
 
 }
