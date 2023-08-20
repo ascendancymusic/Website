@@ -448,7 +448,7 @@ body {
   .top-center-logo {
     margin: 0 auto; /* Center the logo horizontally */
     margin-right: calc(18%);
-	transform: scale(0.75);
+	transform: scale(0.90);
   }
   
   .social-icons {
@@ -514,37 +514,37 @@ body {
   /* Big font 1 (Chipper) */
   .label-line1 { 
     font-weight: 600; /* Gotham Black */
-    font-size: 14px;
-    letter-spacing: 5px; /* Adjust the value to change letter spacing */
+    font-size: 12px;
+    letter-spacing: 4px; /* Adjust the value to change letter spacing */
   }
   /* Small font 1 (Chipper) */
   .label-line2 {
     font-weight: 100; /* Gotham XLight */
-    font-size: 10px;
+    font-size: 7px;
     letter-spacing: 2px;
   }
   /* Big font 2 (Bliss) */
   .label-line3 { 
     font-weight: 600; /* Gotham Black */
-    font-size: 14px;
-    letter-spacing: 6.5px; /* Adjust the value to change letter spacing */
+    font-size: 12px;
+    letter-spacing: 5px; /* Adjust the value to change letter spacing */
   }
   /* Small font 2 (Bliss, Deceiver and Broken Love) */
   .label-line4 {
     font-weight: 100; /* Gotham XLight */
-    font-size: 8.5px;
+    font-size: 6.5px;
     letter-spacing: 1.33px;
   }
   /* Big font 2 (Deceiver) */
   .label-line5 { 
     font-weight: 600; /* Gotham Black */
-    font-size: 14px;
-    letter-spacing: 4.5px; /* Adjust the value to change letter spacing */
+    font-size: 11px;
+    letter-spacing: 4px; /* Adjust the value to change letter spacing */
   }
   /* Big font 2 (Broken Love) */
   .label-line6 { 
     font-weight: 600; /* Gotham Black */
-    font-size: 14px;
+    font-size: 10.1px;
     letter-spacing: 3px; /* Adjust the value to change letter spacing */
   }
 
