@@ -276,8 +276,8 @@ body {
 
 /* About page styling */
 .about-paragraph {
-	letter-spacing: 4px;
-	font-size: 160px;
+  letter-spacing: 4px;
+  font-size: 16px;
 }
 .about-page .content {
   text-align: left; /* Align text to the left */
