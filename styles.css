@@ -447,7 +447,7 @@ body {
   }
   .top-center-logo {
     margin: 0 auto; /* Center the logo horizontally */
-    margin-right: calc(18%);
+    margin-left: calc(50% - 200px);
 	transform: scale(0.90);
   }
   
