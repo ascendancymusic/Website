@@ -549,3 +549,19 @@ body {
   }
 
 }
+
+/* Responsive adjustments */
+@media (max-height: 1090px) {
+
+  
+  #wheel-container {
+    top: 63%;
+  }
+  
+  #angle-display {
+    top: 44%;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+}
