@@ -193,17 +193,22 @@ loadImage.then(image => {
 
 // Create a function to map angle ranges to text labels and paths
 function getAngleInfo(angle) {
-    if (angle >= 0 && angle <= 89) {
+    if (angle >= 0 && angle <= 71) {
+        return {
+            label: '<span class="label"><span class="label-line1">ASCENDANCY - CLARITY<span class="label-line2"><br>(GENRE: ELECTRO | BPM: 112 | DATE: 28.10.)</span></span>',
+            path: "clarity.html"
+        };
+    } else if (angle >= 72 && angle <= 143) {
         return {
             label: '<span class="label"><span class="label-line1">ASCENDANCY - CHIPPER<span class="label-line2"><br>(GENRE: ELECTRO | BPM: 106 | DATE: 14.7.)</span></span>',
             path: "chipper.html"
         };
-    } else if (angle >= 90 && angle <= 179) {
+    } else if (angle >= 144 && angle <= 215) {
         return {
             label: '<span class="label"><span class="label-line3">ASCENDANCY - BLISS<span class="label-line4"><br>(GENRE: FUTURE BOUNCE | BPM: 128 | DATE: 5.5.)</span></span>',
             path: "bliss.html"
         };
-    } else if (angle >= 180 && angle <= 269) {
+	} else if (angle >= 216 && angle <= 287) {
         return {
             label: '<span class="label"><span class="label-line5">ASCENDANCY - DECEIVER<span class="label-line4"><br>(GENRE: FUTURE BOUNCE | BPM: 128 | DATE: 24.3.)</span></span>',
             path: "deceiver.html"
