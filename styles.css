@@ -512,27 +512,56 @@ body {
   font-size: 28px;
   font-family: "Gotham", sans-serif !important; /* Make the "Welcome!" text bold */
   letter-spacing: 10px; /* Adjust the value to change letter spacing */
-}
+  }
 /* Serendipity */
 .label-line2 {
   font-weight: 600;
   font-size: 24px;
   letter-spacing: 9px;
-}
+  }
 /* Chiaroscuro */
 .label-line3 { 
   font-weight: 600; /* Gotham Black */
   font-size: 16px;
   font-family: "Gotham", sans-serif !important; /* Make the "Welcome!" text bold */
   letter-spacing: 7px; /* Adjust the value to change letter spacing */
-}
+  }
 /* Small font */
 .label-line4 {
   font-weight: 100; /* Gotham XLight */
   font-size: 20px;
   letter-spacing: 6px;
+  }
 }
 
+.cursor-trail {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(158, 17, 240, 0.7);
+  border-radius: 50%;
+  animation: cursorMove 0.3s ease forwards; /* Apply the cursorMove animation */
+  pointer-events: none; /* Ensure the trail doesn't interfere with mouse events */
+  transform: translate(-50%, -50%); /* Center the trail element on the cursor */
+}
+
+.cursor-trail-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1; /* Ensure the trail appears on top of other content */
+}
+
+@keyframes cursorMove {
+  0% {
+      opacity: 1;
+      transform: scale(0);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1);
+  }
 }
 
 /* Responsive adjustments */
