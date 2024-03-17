@@ -116,7 +116,7 @@ loadImage.then(image => {
                 previousLabel = label;
             }
 
-            angleDisplay.innerHTML = `<a href="${path}" style="text-decoration: none; color: white; filter: drop-shadow(2px 2px 10px rgba(0, 128, 0, 0.5)); transition: color 0.3s ease, filter 0.3s ease;" onmouseover="this.style.color='#00d965'; this.style.filter='drop-shadow(2px 2px 10px rgba(0, 128, 0, 1))';" onmouseout="this.style.color='white'; this.style.filter='drop-shadow(2px 2px 10px rgba(0, 128, 0, 0.5))';">${label}</a>`;
+            angleDisplay.innerHTML = `<a href="${path}" style="text-decoration: none; color: white; filter: drop-shadow(2px 2px 10px rgba(77, 0, 128, 0.5)); transition: color 0.3s ease, filter 0.3s ease;" onmouseover="this.style.color='#7817ff'; this.style.filter='drop-shadow(2px 2px 10px rgba(77, 0, 128, 1))';" onmouseout="this.style.color='white'; this.style.filter='drop-shadow(2px 2px 10px rgba(77, 0, 128, 0.5))';">${label}</a>`;
             wheelAngle = newAngle;
         }
     };
@@ -193,33 +193,25 @@ loadImage.then(image => {
 
 // Create a function to map angle ranges to text labels and paths
 function getAngleInfo(angle) {
-    if (angle >= 0 && angle <= 71) {
+    if (angle >= 0 && angle <= 120) {
         return {
-            label: '<span class="label"><span class="label-line1">ASCENDANCY - CLARITY<span class="label-line2"><br>(GENRE: ELECTRO | BPM: 112 | DATE: 28.10.)</span></span>',
-            path: "clarity.html"
+            label: '<span class="label"><span class="label-line1">DESUETUDE<span class="label-line4">(12.01.)</span></span>',
+            path: "desuetude.html"
         };
-    } else if (angle >= 72 && angle <= 143) {
+    } else if (angle >= 121 && angle <= 240) {
         return {
-            label: '<span class="label"><span class="label-line1">ASCENDANCY - CHIPPER<span class="label-line2"><br>(GENRE: ELECTRO | BPM: 106 | DATE: 14.7.)</span></span>',
-            path: "chipper.html"
+            label: '<span class="label"><span class="label-line2">SERENDIPITY<span class="label-line4">(09.02.)</span></span>',
+            path: "serendipity.html"
         };
-    } else if (angle >= 144 && angle <= 215) {
+	} else if (angle >= 241 && angle <= 360) {
         return {
-            label: '<span class="label"><span class="label-line3">ASCENDANCY - BLISS<span class="label-line4"><br>(GENRE: FUTURE BOUNCE | BPM: 128 | DATE: 5.5.)</span></span>',
-            path: "bliss.html"
-        };
-	} else if (angle >= 216 && angle <= 287) {
-        return {
-            label: '<span class="label"><span class="label-line5">ASCENDANCY - DECEIVER<span class="label-line4"><br>(GENRE: FUTURE BOUNCE | BPM: 128 | DATE: 24.3.)</span></span>',
-            path: "deceiver.html"
+            label: '<span class="label"><span class="label-line3">CHIAROSCURO W/ BERX<span class="label-line4">(22.03.)</span></span>',
+            path: "chiaroscuro.html"
         };
     } else {
-        return {
-            label: '<span class="label"><span class="label-line6">ASCENDANCY - BROKEN LOVE<span class="label-line4"><br>(GENRE: FUTURE BOUNCE | BPM: 129.3 | DATE: 11.2.)</span></span>',
-            path: "broken-love.html"
-        };
     }
 }
+
 
 // Get the h3 element and the wheel-container
 const songSelector = document.querySelector(".content h3");
