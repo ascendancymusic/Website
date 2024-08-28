@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Tex';
+    src: url('fonts/texgyreadventor-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Tex Bold';
+    src: url('fonts/tex-gyre-adventor.bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
