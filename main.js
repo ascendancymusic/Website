@@ -277,14 +277,14 @@ document.getElementById('change-wheel-right').addEventListener('click', function
 });
 
 function showVinylTitle(vinylNumber) {
-    const vinyl1Title = document.getElementById('vinyl1-title');
-    const vinyl2Title = document.getElementById('vinyl2-title');
+    const vinyl2024Title = document.getElementById('vinyl2024-title');
+    const vinylOldTitle = document.getElementById('vinylOld-title');
     const songs = document.querySelectorAll('#song-list .song');
 
     if (vinylNumber === 1) {
-        vinyl1Title.style.display = 'block';
-        vinyl2Title.style.display = 'none';
-        // Ensure only vinyl1 songs are visible
+        vinyl2024Title.style.display = 'block';
+        vinylOldTitle.style.display = 'none';
+        // Ensure only vinyl2024 songs are visible
         songs.forEach(song => {
             if (song.dataset.image === 'media/vinyl.png') {
                 song.style.display = 'block';
@@ -293,8 +293,8 @@ function showVinylTitle(vinylNumber) {
             }
         });
     } else if (vinylNumber === 2) {
-        vinyl1Title.style.display = 'none';
-        vinyl2Title.style.display = 'block';
+        vinyl2024Title.style.display = 'none';
+        vinylOldTitle.style.display = 'block';
         // Ensure only vinyl2 songs are visible
         songs.forEach(song => {
             if (song.dataset.image === 'media/vinyl2.png') {
