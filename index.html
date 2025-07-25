@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=1">
+<title>AscenDancy</title>
+<link rel="icon" type="image/x-icon" href="media/favicon.ico">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+  <div id="preloader">
+  </div>
+  <canvas style="--gradient-color-1:#191825;--gradient-color-2:#865DFF;--gradient-color-3:#E384FF;--gradient-color-4:#FFA3FD;"
+  id="gradient-canvas" data-transition-in></canvas>
+  <audio id="sound" preload="auto">
+    <source src="media/sound.flac" type="audio/flac">
+  </audio>
+  <div class="top-bar">
+    <button class="hamburger">
+      <div class="bar"><div>
+    </button>
+    <nav class="mobile-nav">
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="https://payhip.com/AscenDancy" target="_blank">STORE</a>
+      <a href="upcoming.html">UPCOMING</a>
+    </nav>
+    <div class="top-left-menu">
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    <div class="top-center-logo">
+      <h1><a href="https://ascendancymusic.com"><img src="media/AscenDancyText.png" alt="Logo"></a></h1>
+    </div>
+    <div class="top-right-menu fade-in">
+      <a href="https://payhip.com/AscenDancy" target="_blank">STORE</a>
+      <a href="upcoming.html">UPCOMING</a>
+    </div>
+  </div>
+  <div class="content">
+    <h2 data-value="WELCOME!">WELCOME!</h2>
+    <p data-value="ENJOY YOUR VISIT!">ENJOY YOUR VISIT!</p>
+    <h3 id="song-selector" data-value="CLICK TO OPEN SONG MENU">CLICK TO OPEN SONG MENU</h3>
+  </div>
+
+  <div class="main-wrapper">
+    <div id="vinyl-titles">
+      <h4 id="vinyl2024-title" class="vinyl-title">2024 Releases</h4>
+      <h4 id="vinylOld-title" class="vinyl-title" style="display: none;">Archive of old bangers</h4>
+    </div>
+    <div id="wheel-container"></div>
+    <button id="change-wheel-left" class="arrow-button left-arrow">&larr;</button>
+    <button id="change-wheel-right" class="arrow-button right-arrow">&rarr;</button>
+    <div id="angle-display">
+      <div id="song-list">
+        <!-- First song list with vinyl2024.png -->
+        <div class="song" data-image="media/vinyl2024.png" data-song-name="desuetude.html">1. Desuetude (Prelude)</div>
+        <div class="song" data-image="media/vinyl2024.png" data-song-name="serendipity.html">2. Serendipity</div>
+        <div class="song" data-image="media/vinyl2024.png" data-song-name="chiaroscuro.html">3. Chiaroscuro w/Berx</div>
+        <div class="song" data-image="media/vinyl2024.png" data-song-name="solace.html">4. Solace EP</div>
+
+        <!-- Second song list with vinylOld.png -->
+        <div class="song" data-image="media/vinylOld.png" data-song-name="https://soundcloud.com/dancyascen/sets/2023-songs" style="display: none;">1. 2023 Playlist</div>
+        <div class="song" data-image="media/vinylOld.png" data-song-name="https://soundcloud.com/dancyascen/sets/og-future-bounce" style="display: none;">2. OG Future Bounce</div>
+      </div>
+    </div>
+    <div id="play-button-container">
+      <button id="play-button">Play</button>
+    </div>
+  </div>
+
+  <!-- Include WebGL and other JavaScript files -->
+  <script src="matter.js"></script>
+  <script src="Gradient.js"></script>
+  <script src="main.js"></script>
+  <script src="burger.js"></script>
+  <script src="load.js"></script>
+  <footer class="footer">
+    <a>&copy; 2025 AscenDancy. All rights reserved.</a>
+    <div class="social-icons">
+      <a href="https://youtube.com/ascendancy"><img src="https://img.icons8.com/?size=512&id=37325&format=png" alt="YouTube"></a>
+      <a href="https://open.spotify.com/artist/7LNgM6pGsy9KGrdLy0CzdU"><img src="https://img.icons8.com/?size=512&id=6707&format=png" alt="Spotify"></a>
+      <a href="https://soundcloud.com/dancyascen"><img src="https://img.icons8.com/?size=512&id=12464&format=png" alt="SoundCloud"></a>
+      <a href="https://instagram.com/dancyascen"><img src="https://img.icons8.com/?size=512&id=32292&format=png" alt="Instagram"></a>
+      <a href="https://twitter.com/dancyascen"><img src="https://img.icons8.com/?size=512&id=437&format=png" alt="Twitter"></a>
+    </div>
+  </footer>
+</body>
+</html>
