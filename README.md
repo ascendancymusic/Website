@@ -1,5 +1,5 @@
 **Welcome!** Visit the site at:
 
-https://ascendancymusic.com
+https://ascendancymusic.github.io/Website/
 
 -Väinö Väänänen
